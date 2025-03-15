@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction de Transplantation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Prédiction du Succès de la Transplantation de Moelle Osseuse</h1>
+    <form method="POST" action="/">
+        <label for="age">Âge du patient :</label>
+        <input type="number" id="age" name="age" min="0" max="18" required>
+        
+        <label for="sex">Sexe :</label>
+        <select id="sex" name="sex">
+            <option value="1">Masculin</option>
+            <option value="0">Féminin</option>
+        </select>
+        
+        <label for="clinical_data">Donnée clinique X :</label>
+        <input type="number" id="clinical_data" name="clinical_data" step="0.1" required>
+        
+        <button type="submit">Prédire</button>
+    </form>
+</body>
+</html>
